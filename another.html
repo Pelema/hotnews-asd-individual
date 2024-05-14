@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div class="headerText"></div>
+      <a class="anchorElement">
+        <img class="advertIMG" src="" width="100" height="100"/>
+      </a>
+    </div>
+
+    <script>
+      var formdata = new FormData();
+      formdata.append("type", "Light Square");
+      formdata.append("tags", "music,party");
+
+      var ajax = new XMLHttpRequest();
+      ajax.addEventListener("load", completeHandler, false);
+
+      ajax.open("POST", "https://ad.simaneka.com/api/get");
+      ajax.setRequestHeader(
+        "authorisation",
+        "5qll46mjeYZsg84PUfqHnz9PxCvN4qcJ"
+      );
+
+      ajax.send(formdata);
+
+      function completeHandler(event) {
+        var response = JSON.parse(event.target.responseText);
+
+        console.log(response);
+        document.querySelector(".advertIMG").src = response.link;
+        document.querySelector(".advertIMG").alt = response.alt;
+        document.querySelector(".anchorElement").href = response.href;
+        document.querySelector(".headerText").innerHTML = response.message;
+
+        console.log("everything has been set");
+      }
+    </script>
+  </body>
+</html>
