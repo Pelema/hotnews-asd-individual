@@ -1,7 +1,6 @@
 {
-  "name": "tailnews",
+  "name": "hotnews",
   "version": "1.0.0",
-  "description": "Tailwind News Template",
   "main": "gulpfile.js",
   "dependencies": {
     "@splidejs/splide": "^4.0.1",
@@ -31,22 +30,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aribudin/tailnews.git"
+    "url": "https://github.com/Pelema/hotnews-asd-individual"
   },
   "keywords": [
     "Newspapper",
-    "Template",
     "News",
     "tailwindcss",
     "Magazine"
   ],
-  "author": "Aribudin",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://tailwindtemplate.net/support/"
-  },
-  "homepage": "https://tailwindtemplate.net/",
-  "directories": {
-    "doc": "docs"
-  }
+  "license": "ISC"
 }
